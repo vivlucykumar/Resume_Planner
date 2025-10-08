@@ -1,0 +1,28 @@
+<header class="card p-4">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <h1 class="display-5 fw-bold">{{ name }}</h1>
+      <p class="lead text-muted">{{ headline }}</p>
+    </div>
+    <div class="col-md-4 text-md-end">
+      <ul class="list-unstyled">
+        <li class="mb-2">
+          <a href="mailto:{{ contactInfo.email }}" class="text-decoration-none text-dark">
+            <i class="bi bi-envelope-fill text-primary me-2"></i>{{ contactInfo.email }}
+          </a>
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-telephone-fill text-primary me-2"></i>{{ contactInfo.phone }}
+        </li>
+        <li class="mb-2">
+          <a href="https://{{ contactInfo.linkedin }}" target="_blank" class="text-decoration-none text-dark">
+            <i class="bi bi-linkedin text-primary me-2"></i>{{ contactInfo.linkedin }}
+          </a>
+        </li>
+        <li>
+          <i class="bi bi-geo-alt-fill text-primary me-2"></i>{{ contactInfo.location }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

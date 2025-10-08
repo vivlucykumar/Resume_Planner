@@ -1,0 +1,72 @@
+/* A vibrant, modern theme for the resume website */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* A colorful gradient background */
+    background: linear-gradient(135deg, #1d2b64 0%, #37375A 50%, #f8cdda 100%);
+    color: #e0e0e0; /* Lighter text color for better contrast on the dark background */
+    background-attachment: fixed; /* Ensures the gradient stays in place on scroll */
+}
+
+.section-title {
+    color: #ffffff; /* White title for better visibility */
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #f8cdda; /* A vibrant accent color */
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Glassmorphism effect for cards */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 15px; /* Softer corners */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Update text colors inside the card for readability */
+.card .lead,
+.card .text-muted {
+    color: #d1d1d1 !important;
+}
+
+.card .list-group-item {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-title, .card-subtitle, .card-body, .card-footer {
+    color: #ffffff;
+}
+
+.card a {
+    color: #f8cdda !important; /* Vibrant link color */
+    text-decoration: none !important;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: #ffffff !important;
+}
+
+/* Styling for skill badges */
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.9em !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    color: #1d2b64 !important; /* Dark text for contrast on the light badge */
+}
+
+/* Make Bootstrap Icons stand out */
+.bi {
+    color: #f8cdda !important;
+}

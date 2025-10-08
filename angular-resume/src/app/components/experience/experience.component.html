@@ -1,0 +1,23 @@
+<section>
+  <h2 class="mb-4 section-title">Work Experience</h2>
+  <div class="experience-list">
+    <div class="card mb-4" *ngFor="let job of experience">
+      <div class="card-body p-4">
+        <div class="d-flex justify-content-between">
+          <h4 class="card-title fw-bold text-primary">{{ job.role }}</h4>
+          <span class="text-muted fw-bold">{{ job.duration }}</span>
+        </div>
+        <h6 class="card-subtitle mb-2 text-muted">{{ job.company }} | {{ job.location }}</h6>
+        <ul class="mt-3">
+          <li *ngFor="let point of job.description">{{ point }}</li>
+        </ul>
+        <div class="mt-3">
+          <strong class="me-2">Tech Stack:</strong>
+          <span *ngFor="let tech of job.stack" class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill me-1 mb-1 p-2">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

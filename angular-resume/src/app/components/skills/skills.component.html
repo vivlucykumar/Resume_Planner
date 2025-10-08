@@ -1,0 +1,17 @@
+<section>
+  <h2 class="mb-4 section-title">Technical & Professional Skills</h2>
+  <div class="card p-4">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let group of skillGroups">
+          <h5 class="fw-bold">{{ group.area }}</h5>
+          <div>
+            <span *ngFor="let skill of group.skills" class="badge bg-primary-subtle text-primary-emphasis rounded-pill me-2 mb-2 p-2">
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
