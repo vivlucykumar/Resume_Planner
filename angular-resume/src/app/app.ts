@@ -7,6 +7,7 @@ import { EducationComponent } from './components/education/education.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AchievementsComponent } from './components/achievements/achievements';
+import { ProfileVideoComponent } from './components/profile-video/profile-video';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { AchievementsComponent } from './components/achievements/achievements';
     EducationComponent,
     CertificationsComponent,
     FooterComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    ProfileVideoComponent
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']

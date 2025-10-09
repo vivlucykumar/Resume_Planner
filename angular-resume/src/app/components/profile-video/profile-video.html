@@ -1,10 +1,24 @@
-<section *ngIf="videoUrl">
-  <h2 class="mb-4 section-title">Video Introduction</h2>
-  <div class="video-card-container">
-    <div class="card video-card">
-      <video controls [src]="videoUrl" type="video/mp4">
+<!-- This component is now a self-contained side panel -->
+<aside class="video-side-panel" [class.is-open]="isPanelOpen">
+
+  <!-- Button to toggle the panel's visibility -->
+  <button class="panel-toggle" (click)="togglePanel()" [attr.aria-expanded]="isPanelOpen">
+    <i class="bi" [ngClass]="isPanelOpen ? 'bi-x-lg' : 'bi-camera-video-fill'"></i>
+    <!-- Text appears only when the panel is closed -->
+    <span class="toggle-text" *ngIf="!isPanelOpen">Click Me</span>
+    <span class="visually-hidden">Toggle Video Panel</span>
+  </button>
+
+  <!-- Content of the panel -->
+  <div class="panel-content" *ngIf="videoUrl">
+    <h4 class="panel-title">Video Intro</h4>
+    <div class="video-wrapper">
+      <!-- The video element is only rendered when the panel is open to save resources -->
+      <video *ngIf="isPanelOpen" controls autoplay muted loop [src]="videoUrl" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
+    <p class="panel-description">A brief introduction to my professional background and skills.</p>
   </div>
-</section>
+</aside>
+
