@@ -51,3 +51,5 @@ This project uses the `angular-cli-ghpages` package to make deployment simple.
 
 ng generate component components/<header.component>
 ng generate component components/summary<header.component>
+
+ng deploy --base-href=https://vivlucykumar.github.io/Resume_Planner/

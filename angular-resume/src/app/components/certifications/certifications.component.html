@@ -1,14 +1,46 @@
 <section>
-  <h2 class="mb-4 section-title">Certifications</h2>
-  <div class="card">
-    <div class="list-group list-group-flush">
-      <div *ngFor="let cert of certifications" class="list-group-item d-flex justify-content-between align-items-center">
-        <div>
-          <h6 class="mb-0 fw-bold">{{ cert.name }}</h6>
-          <small class="text-muted">{{ cert.issuer }}</small>
+  <h2 class="mb-4 section-title">Certifications & Credentials</h2>
+  <div id="certificationsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button *ngFor="let cert of certifications; let i = index" type="button"
+        [attr.data-bs-target]="'#certificationsCarousel'" [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0" [attr.aria-current]="i === 0 ? 'true' : 'false'"
+        [attr.aria-label]="'Slide ' + (i + 1)"></button>
+    </div>
+
+    <!-- Carousel Inner Content -->
+    <div class="carousel-inner">
+      <div *ngFor="let cert of certifications; let i = index" class="carousel-item" [class.active]="i === 0">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <!-- Updated Card Layout with Image -->
+          <div class="card certification-card p-3">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-5">
+                <img [src]="cert.imageUrl" class="img-fluid rounded-start" [alt]="cert.name + ' Certificate'">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body text-center text-md-start">
+                  <h5 class="card-title fw-bold">{{ cert.name }}</h5>
+                  <p class="card-text text-muted mb-2">Issued by: <strong>{{ cert.issuer }}</strong></p>
+                  <p *ngIf="cert.date" class="card-text text-muted">Date: <strong>{{ cert.date }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <span *ngIf="cert.date" class="badge bg-light text-dark">{{ cert.date }}</span>
       </div>
     </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>
+

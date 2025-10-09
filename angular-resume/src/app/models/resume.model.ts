@@ -18,6 +18,7 @@ export interface ICertification {
   name: string;
   issuer: string;
   date?: string;
+  imageUrl?: string;
 }
 
 export interface ISkill {

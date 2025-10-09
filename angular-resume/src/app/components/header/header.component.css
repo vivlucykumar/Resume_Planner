@@ -1,0 +1,72 @@
+.profile-header {
+  position: relative;
+  overflow: visible; /* Allows the profile picture to pop out */
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 100px; /* Creates space for the profile picture */
+}
+
+.cover-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.profile-picture {
+  position: absolute;
+  top: 140px; /* Position it to overlap the cover */
+  left: 40px;
+  z-index: 10;
+}
+
+.profile-picture img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-info {
+  padding-top: 1rem;
+}
+
+.main-info {
+  /* This margin pushes the name and headline to the right of the profile picture */
+  padding-left: 220px;
+}
+
+.contact-info a {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #c94a7a; /* Accent color from your theme */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .profile-picture {
+    position: static; /* Center the picture on mobile */
+    transform: translateY(-50%); /* Pulls the picture up */
+    margin-bottom: -80px; /* Reduces the gap created by the transform */
+  }
+
+  .main-info {
+    padding-left: 0;
+    margin-top: 80px; /* Space for the centered profile picture */
+  }
+
+  .contact-info {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+}

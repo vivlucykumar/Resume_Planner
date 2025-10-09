@@ -30,7 +30,9 @@ export class ResumeDataService {
       email: 'viv1989kumar@gmail.com',
       phone: '+91 9960969420',
       linkedin: 'linkedin.com/in/vivek-kumar-83673a45',
-      location: 'Pune, Maharashtra, India'
+      location: 'Pune, Maharashtra, India',
+      profileImageUrl: 'assets/certificates/profile.png', // <-- Add your profile image here
+      coverImageUrl: 'assets/certificates/cover.png'      // <-- Add your cover image here
     };
   }
 
@@ -152,12 +154,39 @@ export class ResumeDataService {
   // --- CERTIFICATIONS ---
   getCertifications(): ICertification[] {
     return [
-       { name: 'Certified Scrum Master (CSM)', issuer: 'Scrum Alliance', date: 'Mar 2025' },
-       { name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', date: 'Mar 2023' },
-       { name: 'Full Stack Certification', issuer: 'Internal/Details not specified' },
-       { name: 'IIMB Strategic Management course', issuer: 'Indian Institute of Management Bangalore' },
-       { name: 'Github Copilot', issuer: 'GitHub' },
-       { name: 'Google Cloud Migration Summit', issuer: 'Google' }
+       {
+         name: 'Certified Scrum Master (CSM)',
+         issuer: 'Scrum Alliance',
+         date: 'Mar 2025',
+         imageUrl: 'assets/certificates/csm.png'
+       },
+       {
+         name: 'AWS Certified Cloud Practitioner',
+         issuer: 'Amazon Web Services',
+         date: 'Mar 2023',
+         imageUrl: 'assets/certificates/aws.png'
+       },
+       {
+         name: 'Full Stack Certification',
+         issuer: 'Internal/Details not specified',
+         imageUrl: 'assets/certificates/fullstack.png'
+       },
+       {
+         name: 'IIMB Strategic Management course',
+         issuer: 'Indian Institute of Management Bangalore',
+         imageUrl: 'assets/certificates/iimb.png'
+       },
+       {
+         name: 'Github Copilot',
+         issuer: 'GitHub',
+         imageUrl: 'assets/certificates/github.png'
+       },
+       {
+         name: 'Google Cloud Migration Summit',
+         issuer: 'Google',
+         imageUrl: 'assets/certificates/google.png'
+       }
     ];
   }
 }
+
