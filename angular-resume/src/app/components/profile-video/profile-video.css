@@ -1,0 +1,23 @@
+.video-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-card {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  padding: 1rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem; /* Match the card's inner radius */
+}

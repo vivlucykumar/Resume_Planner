@@ -214,5 +214,11 @@ export class ResumeDataService {
       }
     ];
   }
+
+  // --- PROFILE VIDEO ---
+  getProfileVideoUrl(): string {
+    // Make sure you have a video file named 'profile_video.mp4' in this folder
+    return 'assets/certificates/profile_video.mp4';
+  }
 }
 

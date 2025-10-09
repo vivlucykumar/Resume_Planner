@@ -1,0 +1,10 @@
+<section *ngIf="videoUrl">
+  <h2 class="mb-4 section-title">Video Introduction</h2>
+  <div class="video-card-container">
+    <div class="card video-card">
+      <video controls [src]="videoUrl" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
