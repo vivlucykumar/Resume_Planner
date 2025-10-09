@@ -1,0 +1,78 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-scene {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: relative;
+  perspective: 1500px; /* Increased for a less distorted, more realistic 3D effect */
+  margin-bottom: 1.5rem;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.carousel-cell {
+  position: absolute;
+  width: 450px; /* Fixed width to match our calculation */
+  height: 300px;
+  /* Center the cell horizontally */
+  left: calc(50% - 225px);
+  top: 10px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.carousel-cell .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.carousel-controls button {
+  background: none;
+  border: none;
+  color: #f8cdda;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.carousel-controls button:hover {
+  transform: scale(1.1);
+}
+

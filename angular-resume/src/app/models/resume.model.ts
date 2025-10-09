@@ -21,7 +21,14 @@ export interface ICertification {
   imageUrl?: string;
 }
 
+// Add this new interface for the carousel
+export interface IAchievement {
+  imageUrl: string;
+  caption: string;
+}
+
 export interface ISkill {
   area: string;
   skills: string[];
 }
+

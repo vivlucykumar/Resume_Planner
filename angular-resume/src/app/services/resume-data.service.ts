@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IExperience, IEducation, ICertification, ISkill } from '../models/resume.model';
+import { IExperience, IEducation, ICertification, ISkill, IAchievement } from '../models/resume.model';
 
 @Injectable({
   providedIn: 'root'
@@ -186,6 +186,32 @@ export class ResumeDataService {
          issuer: 'Google',
          imageUrl: 'assets/certificates/google.png'
        }
+    ];
+  }
+
+  // --- ACHIEVEMENTS ---
+  getAchievements(): IAchievement[] {
+    return [
+      {
+        imageUrl: 'assets/certificates/germany_onsite.png',
+        caption: 'Onsite in Germany for Client Engagement & Support'
+      },
+      {
+        imageUrl: 'assets/certificates/wells_fargo_award.png',
+        caption: 'Appreciated by Wells Fargo as "Best Supplier 2022" for Wipro'
+      },
+      {
+        imageUrl: 'assets/certificates/team_lead.png',
+        caption: 'Leading a High-Performing Team at Sphinx Worldbiz'
+      },
+      {
+        imageUrl: 'assets/certificates/jlr_project.png',
+        caption: 'Supporting the ERP System for Jaguar Land Rover'
+      },
+      {
+        imageUrl: 'assets/certificates/vw_project.png',
+        caption: 'Optimizing PLM Software for Volkswagen'
+      }
     ];
   }
 }

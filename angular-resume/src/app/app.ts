@@ -6,6 +6,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { EducationComponent } from './components/education/education.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AchievementsComponent } from './components/achievements/achievements';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ExperienceComponent,
     EducationComponent,
     CertificationsComponent,
-    FooterComponent
+    FooterComponent,
+    AchievementsComponent
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
