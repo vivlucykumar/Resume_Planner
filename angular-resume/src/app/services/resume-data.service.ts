@@ -19,9 +19,12 @@ export class ResumeDataService {
 
   getSummary(): string[] {
     return [
-      'A passionate coder with 13+ years of experience, specializing in Core Java, Spring Boot, Microservices, and AWS.',
+      'Results-driven professional with 13.8 years of total experience, including 10+ years in Team lead Scrum roles in software development and coding. Certified Scrum master.',
       'Proven expertise in leading teams, contributing individually, and driving cloud migration projects in the BFSI and Automotive domains.',
-      'Seeking a challenging position to utilize my skills in an environment that offers professional growth while being resourceful, innovative, and flexible.'
+      'Seeking a challenging position to utilize my skills in an environment that offers professional growth while being resourceful, innovative, and flexible.',
+      'Facilitated Agile Ceremonies such as Sprint Planning, Story Grooming Daily Standups, Retrospectives, Story Refinement, and Release Planning Tracked & managed product backlog and sprint activities Maintained up-to-date tracking of all Scrum activities, improving reporting efficiency and sprint outcomes.',
+      'Hands on Knowledge of tools like Jira (User & Admin) & Confluence',
+      'Proficient in Development with technologies used Spring, Spring boot, Pivotal Cloud Foundry, AWS Angular, MySQL, Oracle Db, Micro services Architecture '
     ];
   }
 
